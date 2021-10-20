@@ -3,10 +3,13 @@ import logging
 
 from load_all import bot, DP
 
-from interactive.handlers import interactive_register
-from families.handlers import family_register
+from chats.handlers import chats_register
+
 
 logger = logging.getLogger(__name__)
+
+
+
 
 async def main():
     logging.basicConfig(
@@ -15,8 +18,7 @@ async def main():
     )
     logger.info("Starting bot")
 
-    interactive_register(DP)
-    family_register(DP)
+    chats_register(DP)
     
 
     # start
